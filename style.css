@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+body {
+    padding: 0;
+    margin: auto;
+    font-family:Quicksand,"sans-serif", Segoe UI;
+}
+
+.img-frame {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+.img-card {
+    width: 5%;
+    height: 40vw;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    margin:0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #fff;
+    position: relative;
+    transition: 0.7s ease-in;
+    padding:1rem;
+}
+
+.img-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgb(0,0,0);
+    background: linear-gradient(360deg, rgba(0,0,0,1) 16%, rgba(0,0,0,0.3085609243697479) 71%, rgba(0,212,255,0) 100%);
+}
+
+
+#card1 {
+    background-image: url(./img/19618.jpg);
+}
+
+#card2 {
+    background-image: url(./img/2381677.jpg);
+}
+
+#card3 {
+    background-image: url(./img/2637817.jpg);
+}
+
+#card4 {
+    background-image: url(./img/2638329.jpg);
+}
+
+.description {
+    opacity: 0;
+    z-index:10;
+    transition:0.6s ease-in;
+}
+
+.description h4 {
+    font-size: 2rem;
+    margin-bottom:0;
+}
+
+
+
+.card-width {
+    width:50%;
+    animation-name: expandWidth;
+    animation-duration: 0.7s;
+}
+
+
+@keyframes expandWidth {
+    0%{
+        width:5%;
+    }
+    100% {
+        width:50%;
+    }
+}
+
+.display {
+    opacity: 1;
+    animation-name: fadeIn;
+    animation-duration: 0.8s;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
